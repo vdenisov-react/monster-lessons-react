@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 class Dropdown extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            isOpened: false,
-        };
+        this.state = { isOpened: false };
     }
 
     toggleState() {
@@ -16,7 +14,7 @@ class Dropdown extends Component {
 
     render() {
         console.log('isOpened =>', this.state.isOpened);
-        return <div onClick={this.toggleState}>Its dropdown baby</div>;
+        return <div onClick={this.toggleState.bind(this)}>Its dropdown baby</div>;
     }
 }
 

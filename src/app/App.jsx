@@ -8,6 +8,7 @@ class App extends Component {
         return (
             <div className={css(styles.container)}>
                 <div>Our App</div>
+                <div className={css(styles.square)}></div>
             </div>
         );
     }

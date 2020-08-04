@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
+import { Router, Route } from 'react-router';
+import { createBrowserHistory } from 'history';
+
+import Home from './pages/Home';
+import About from './pages/About';
+
 import './App.css';
 
-class App extends Component {
-    submit() {
-        console.log('submit =>', this.testInput.value);
-    }
+const hashHistory = createBrowserHistory();
 
+class App extends Component {
     render() {
         return (
-            <div>
-                <input type="text" placeholder="text" ref={input => (this.testInput = input)} />
-                <button onClick={this.submit.bind(this)}>Submit</button>
-            </div>
+            <Router history={hashHistory}>
+                <Route exact path="/" component={Home} />
+                <Route path="/about" component={About} />
+            </Router>
         );
     }
 }

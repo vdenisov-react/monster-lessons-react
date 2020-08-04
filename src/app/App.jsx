@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Dropdown from './components/Dropdown';
+import Header from './components/Header';
 
 class App extends Component {
     render() {
         return (
             <div>
-                <Dropdown />
+                <Header />
             </div>
         );
     }

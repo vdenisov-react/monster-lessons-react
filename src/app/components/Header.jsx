@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 class Header extends Component {
     static propTypes = {
         items: PropTypes.array.isRequired,
+        // ---
+        isLoading: PropTypes.bool,
+        submit: PropTypes.func.isRequired,
+        title: PropTypes.string.isRequired,
     };
 
     render() {

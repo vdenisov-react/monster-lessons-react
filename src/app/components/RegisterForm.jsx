@@ -22,6 +22,7 @@ class RegisterForm extends Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <input type="text" placeholder="E-mail" value={this.state.email} onChange={this.handleEmailChange} />
+                <button type="submit">Save</button>
             </form>
         );
     }

@@ -4,6 +4,8 @@ class RegisterForm extends Component {
     constructor(props) {
         super(props);
         this.state = { email: '' };
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleEmailChange = this.handleEmailChange.bind(this);
     }
 
     handleSubmit() {
@@ -16,8 +18,8 @@ class RegisterForm extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit.bind(this)}>
-                <input type="text" placeholder="E-mail" value={this.state.email} onChange={this.handleEmailChange.bind(this)} />
+            <form onSubmit={this.handleSubmit}>
+                <input type="text" placeholder="E-mail" value={this.state.email} onChange={this.handleEmailChange} />
             </form>
         );
     }

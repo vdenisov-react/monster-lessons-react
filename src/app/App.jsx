@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import RegisterForm from './components/RegisterForm';
 import './App.css';
 
 class App extends Component {
+    submit() {
+        console.log('submit =>', this.testInput.value);
+    }
+
     render() {
         return (
-            <div className="container">
-                <RegisterForm />
+            <div>
+                <input type="text" placeholder="text" ref={input => (this.testInput = input)} />
+                <button onClick={this.submit.bind(this)}>Submit</button>
             </div>
         );
     }

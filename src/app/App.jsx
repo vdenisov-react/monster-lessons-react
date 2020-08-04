@@ -1,37 +1,17 @@
-import React from 'react';
-import { Router, Route } from 'react-router';
-import { createBrowserHistory } from 'history';
+import React, { Component } from 'react';
+// import './App.css';
+import { css } from 'aphrodite/no-important';
+import styles from './AppStyles';
 
-import Header from './components/Header';
-import Home from './pages/Home';
-import About from './pages/About';
-
-import './App.css';
-
-const hashHistory = createBrowserHistory();
-
-const menu = [
-    {
-        link: '/',
-        label: 'Home',
-    },
-    {
-        link: '/about',
-        label: 'About',
-    },
-];
-
-const App = () => {
-    return (
-        <div>
-            <Header items={menu} />
-
-            <Router history={hashHistory}>
-                <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />
-            </Router>
-        </div>
-    );
-};
+class App extends Component {
+    render() {
+        return (
+            <div className={css(styles.container)}>
+                <div>Our App</div>
+                <div className={css(styles.square)}></div>
+            </div>
+        );
+    }
+}
 
 export default App;

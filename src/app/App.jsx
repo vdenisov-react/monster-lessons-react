@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Router, Route } from 'react-router';
 import { createBrowserHistory } from 'history';
 
@@ -21,19 +21,17 @@ const menu = [
     },
 ];
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <Header items={menu} />
+const App = () => {
+    return (
+        <div>
+            <Header items={menu} />
 
-                <Router history={hashHistory}>
-                    <Route exact path="/" component={Home} />
-                    <Route path="/about" component={About} />
-                </Router>
-            </div>
-        );
-    }
-}
+            <Router history={hashHistory}>
+                <Route exact path="/" component={Home} />
+                <Route path="/about" component={About} />
+            </Router>
+        </div>
+    );
+};
 
 export default App;

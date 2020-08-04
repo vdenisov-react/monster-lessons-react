@@ -8,8 +8,15 @@ class Dropdown extends Component {
         };
     }
 
+    toggleState() {
+        this.setState({
+            isOpened: !this.state.isOpened,
+        });
+    }
+
     render() {
-        return <div>Its dropdown baby</div>;
+        console.log('isOpened =>', this.state.isOpened);
+        return <div onClick={this.toggleState}>Its dropdown baby</div>;
     }
 }
 

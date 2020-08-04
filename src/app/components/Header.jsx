@@ -4,22 +4,6 @@ import PropTypes from 'prop-types';
 class Header extends Component {
     static propTypes = {
         items: PropTypes.array.isRequired,
-        // --- types ---
-        isLoading: PropTypes.bool,
-        submit: PropTypes.func.isRequired,
-        title: PropTypes.string.isRequired,
-        // --- values ---
-        type: PropTypes.oneOf(['news', 'photos']),
-        user: PropTypes.shape({
-            name: PropTypes.string,
-            age: PropTypes.number,
-        }),
-        user: PropTypes.arrayOf(
-            PropTypes.shape({
-                name: PropTypes.string,
-                age: PropTypes.number,
-            }),
-        ),
     };
 
     render() {
